@@ -7,18 +7,18 @@ pipeline {
         maven "3.8.0"
     }
 
-    stages {
-        stage("Build") {
-            steps {
-                sh "mvn -version"
-                sh "mvn clean install"
-            }
-        }
-    }
+//    stages {
+  //      stage("Build") {
+    //        steps {
+      //          sh "mvn -version"
+        //        sh "mvn clean install"
+          //  }
+     //   }
+ //   }
 
-    post {
-        always {
-            cleanWs()
-        }
-    }
+  //  post {
+   //     always {
+     //       cleanWs()
+ //       }
+ //   }
 }
