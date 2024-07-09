@@ -4,21 +4,21 @@ pipeline {
     agent any
 
     tools {
-        maven "3.8.0"
+        maven "maven"
     }
 
     stages {
-  //      stage("Build") {
-    //        steps {
-      //          sh "mvn -version"
-        //        sh "mvn clean install"
-          //  }
-     //   }
- //   }
+        stage("Build") {
+            steps {
+                sh "mvn -version"
+                sh "mvn clean install"
+            }
+        }
+    }
 
-  //  post {
-   //     always {
-     //       cleanWs()
- //       }
+    post {
+        always {
+            cleanWs()
+        }
     }
 }
